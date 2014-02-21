@@ -29,13 +29,13 @@ namespace vectry
         vexplicit vinline CMat3();
         vexplicit vinline CMat3(T value);
         vexplicit vinline CMat3(T values[9]);
-        vexplicit vinline CMat3(const CMat3& mat);
         vexplicit vinline CMat3(const CVec3<T>& row1,
                                 const CVec3<T>& row2,
                                 const CVec3<T>& row3);
         vexplicit vinline CMat3(T row1col1, T row1col2, T row1col3,
                                 T row2col1, T row2col2, T row2col3,
                                 T row3col1, T row3col2, T row3col3);
+        vinline CMat3(const CMat3& mat);
         vinline ~CMat3();
 
         vinline CMat3&  operator =  (const CMat3& mat);

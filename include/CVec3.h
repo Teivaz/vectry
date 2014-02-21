@@ -25,11 +25,11 @@ namespace vectry
 
         // Constructors
         vexplicit vinline CVec3();
-        vexplicit vinline CVec3(const CVec3& vec);
         vexplicit vinline CVec3(const CVec2<T>& vec, T v);
         vexplicit vinline CVec3(T v, const CVec2<T>& vec);
         vexplicit vinline CVec3(T _x, T _y, T _z);
         vexplicit vinline CVec3(T value);
+        vinline CVec3(const CVec3& vec);
         vinline ~CVec3();
 
         vinline CVec3&  operator =  (const CVec3& vec);

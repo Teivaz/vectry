@@ -24,9 +24,9 @@ namespace vectry
         T x, y;
 
         vexplicit vinline CVec2();
-        vexplicit vinline CVec2(const CVec2& vec);
         vexplicit vinline CVec2(T _x, T _y);
         vexplicit vinline CVec2(T value);
+        vinline CVec2(const CVec2& vec);
         vinline ~CVec2();
 
         vinline CVec2&  operator =  (const CVec2& vec);
