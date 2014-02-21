@@ -14,7 +14,7 @@ Can be used fully or partially.
 ======
 
 Example:
-
+<pre><code>
 #define VECTRY_INLINE
 #include "include/vectry.h"
 using namespace vectry;
@@ -38,3 +38,4 @@ public:
 		return transforamtion;
 	}
 }
+</code></pre>
