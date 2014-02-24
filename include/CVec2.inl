@@ -167,6 +167,20 @@ vinline void CVec2<T>::SwapElemtns()
 }
 
 template<typename T>
+vinline void CVec2<T>::TurnRight90()
+{
+    SwapElemtns();
+    y *= -1;
+}
+
+template<typename T>
+vinline void CVec2<T>::TurnLeft90()
+{
+    SwapElemtns();
+    x *= -1;
+}
+
+template<typename T>
 vinline CVec2<T> CVec2<T>::GetLeftNormal() const
 {
     CVec2 norm(*this);

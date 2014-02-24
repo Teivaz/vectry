@@ -50,6 +50,9 @@ namespace vectry
         vinline T       Normalize();
 
         vinline void    SwapElemtns();
+        vinline void    TurnRight90();
+        vinline void    TurnLeft90();
+		
         vinline CVec2   GetLeftNormal() const;
         vinline CVec2   GetRightNomal() const;
     };
