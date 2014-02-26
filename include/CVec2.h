@@ -43,6 +43,7 @@ namespace vectry
         vinline CVec2&  operator *= (T value);
         vinline CVec2   operator /  (T value) const;
         vinline bool    operator == (const CVec2& value) const;
+        vinline bool    operator != (const CVec2& value) const;
 
         vinline T       Dot(const CVec2& vec) const;
         vinline T       SqLength() const;

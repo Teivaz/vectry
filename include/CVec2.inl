@@ -7,32 +7,37 @@
 * This document is licensed under the GPLv2
 */
 
+// vec()
 template<typename T>
 vinline CVec2<T>::CVec2()
     : x(0)
     , y(0)
 {}
 
+// vec(vec)
 template<typename T>
 vinline CVec2<T>::CVec2(const CVec2& vec)
     : x(vec.x)
     , y(vec.y)
 {}
 
+// vec(i, i)
 template<typename T>
 vinline CVec2<T>::CVec2(T _x, T _y)
     : x(_x)
     , y(_y)
 {}
 
+// vec(i)
 template<typename T>
 vinline CVec2<T>::CVec2(T value)
     : x(value)
     , y(value)
 {}
 
+// vec = vec
 template<typename T>
-vinline CVec2<T>& CVec2<T>::operator =(const CVec2& vec)
+vinline CVec2<T>& CVec2<T>::operator = (const CVec2& vec)
 {
     x = vec.x;
     y = vec.y;
@@ -43,52 +48,60 @@ template<typename T>
 vinline CVec2<T>::~CVec2()
 {}
 
+// vec + vec
 template<typename T>
-vinline CVec2<T> CVec2<T>::operator +(const CVec2& vec) const
+vinline CVec2<T> CVec2<T>::operator + (const CVec2& vec) const
 {
     return CVec2(x + vec.x, y + vec.y);
 }
 
+// vec + i
 template<typename T>
-vinline CVec2<T> CVec2<T>::operator +(T value)
+vinline CVec2<T> CVec2<T>::operator + (T value)
 {
     return CVec2(x + value, y + value);
 }
 
+// vec += vec
 template<typename T>
-vinline CVec2<T>& CVec2<T>::operator +=(const CVec2& vec)
+vinline CVec2<T>& CVec2<T>::operator += (const CVec2& vec)
 {
     x += vec.x;
     y += vec.y;
     return *this;
 }
 
+// vec += i
 template<typename T>
-vinline CVec2<T>& CVec2<T>::operator +=(T value)
+vinline CVec2<T>& CVec2<T>::operator += (T value)
 {
     x += value;
     y += value;
     return *this;
 }
 
+// vec - vec
 template<typename T>
-vinline CVec2<T> CVec2<T>::operator -(const CVec2& vec) const
+vinline CVec2<T> CVec2<T>::operator - (const CVec2& vec) const
 {
     return CVec2(x - vec.x, y - vec.y);
 }
 
+// vec - i
 template<typename T>
-vinline CVec2<T> CVec2<T>::operator -(T value) const
+vinline CVec2<T> CVec2<T>::operator - (T value) const
 {
     return CVec2(x - value, y - value);
 }
 
+// -vec
 template<typename T>
-vinline CVec2<T> CVec2<T>::operator -() const
+vinline CVec2<T> CVec2<T>::operator - () const
 {
     return CVec2(-x, -y);
 }
 
+// vec -= vec
 template<typename T>
 vinline CVec2<T>&  CVec2<T>::operator -= (const CVec2& vec)
 {
@@ -97,36 +110,48 @@ vinline CVec2<T>&  CVec2<T>::operator -= (const CVec2& vec)
     return *this;
 }
 
+// vec -= i
 template<typename T>
-vinline CVec2<T>& CVec2<T>::operator -=(T value)
+vinline CVec2<T>& CVec2<T>::operator -= (T value)
 {
     x -= value;
     y -= value;
     return *this;
 }
 
+// vec == vec
 template<typename T>
-vinline bool CVec2<T>::operator ==(const CVec2& vec) const
+vinline bool CVec2<T>::operator == (const CVec2& vec) const
 {
     return (x == vec.x) && (y == vec.y);
 }
 
+// vec != vec
 template<typename T>
-vinline CVec2<T> CVec2<T>::operator *(T value) const
+vinline bool CVec2<T>::operator != (const CVec2& vec) const
+{
+    return (x != vec.x) || (y != vec.y);
+}
+
+// vec * i
+template<typename T>
+vinline CVec2<T> CVec2<T>::operator * (T value) const
 {
     return CVec2(x * value, y * value);
 }
 
+// vec *= i
 template<typename T>
-vinline CVec2<T>& CVec2<T>::operator *=(T value)
+vinline CVec2<T>& CVec2<T>::operator *= (T value)
 {
     x *= value;
     y *= value;
     return *this;
 }
 
+// vec / i
 template<typename T>
-vinline CVec2<T> CVec2<T>::operator /(T value) const
+vinline CVec2<T> CVec2<T>::operator / (T value) const
 {
     return CVec2(x / value, y / value);
 }
@@ -206,6 +231,7 @@ vinline CVec2<T> abs(const CVec2<T>& vec)
     return CVec2<T>(::abs(vec.x), ::abs(vec.y));
 }
 
+// i / vec
 template<typename T>
 vinline CVec2<T> operator / (T value, CVec2<T> vec)
 {

@@ -38,29 +38,37 @@ namespace vectry
         vinline CMat3(const CMat3& mat);
         vinline ~CMat3();
 
-        vinline CMat3&  operator =  (const CMat3& mat);
-        vinline CMat3   operator +  (const CMat3& mat) const;
-        vinline CMat3   operator +  (T value) const;
-        vinline CMat3&  operator += (const CMat3& mat);
-        vinline CMat3&  operator += (T value);
-        vinline CMat3   operator -  () const;
-        vinline CMat3   operator +  () const;
-        vinline CMat3   operator -  (const CMat3& mat) const;
-        vinline CMat3   operator -  (T value) const;
-        vinline CMat3&  operator -= (const CMat3& mat);
-        vinline CMat3&  operator -= (T value);
-        vinline CMat3   operator *  (const CMat3& mat) const;
-        vinline CMat3   operator *  (T value) const;
+        vinline CMat3&   operator =  (const CMat3& mat);
+        vinline CMat3    operator +  (const CMat3& mat) const;
+        vinline CMat3    operator +  (T value) const;
+        vinline CMat3&   operator += (const CMat3& mat);
+        vinline CMat3&   operator += (T value);
+        vinline CMat3    operator -  () const;
+        vinline CMat3    operator +  () const;
+        vinline CMat3    operator -  (const CMat3& mat) const;
+        vinline CMat3    operator -  (T value) const;
+        vinline CMat3&   operator -= (const CMat3& mat);
+        vinline CMat3&   operator -= (T value);
+        vinline CMat3    operator *  (const CMat3& mat) const;
+        vinline CMat3    operator *  (T value) const;
         vinline CVec3<T> operator *  (const CVec3<T>& vec) const;
-        vinline bool    operator == (const CMat3& mat) const;
+        vinline bool     operator == (const CMat3& mat) const;
+        vinline bool     operator != (const CMat3& mat) const;
 
-        vinline T       Det() const;
-        vinline CMat3   Transpose() const;
-        vinline void    SetIdentity();
-        vinline void    SetScale(const CVec2<T>& scale);
-        vinline void    SetTranslation(const CVec2<T>& pos);
-        vinline void    SetRotatation(T rot);
+        vinline T        Det() const;
+        vinline CMat3    Transpose() const;
+        vinline void     SetIdentity();
+        vinline void     SetScale(const CVec2<T>& scale);
+        vinline void     SetTranslation(const CVec2<T>& pos);
+        vinline void     SetRotatation(T rot);
+        vinline T        GetRotationPart() const;
+        vinline CVec2<T> GetRotationPartSinCos() const;
+        vinline CVec2<T> GetTranslationPart() const;
+        vinline CVec2<T> GetScalePart() const;
     };
+
+    template<typename T>
+    vinline CVec2<T> Transform(const CMat3<T>& transformation, const CVec2<T>& point);
 
 // Implementation
 #include "CMat3.inl"

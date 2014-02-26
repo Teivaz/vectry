@@ -46,6 +46,7 @@ namespace vectry
         vinline CVec3&  operator *= (T value);
         vinline CVec3   operator /  (T value) const;
         vinline bool    operator == (const CVec3& value) const;
+        vinline bool    operator != (const CVec3& value) const;
 
         vinline T       Dot(const CVec3& vec) const;
         vinline CVec3   Cross(const CVec3& vec) const;
