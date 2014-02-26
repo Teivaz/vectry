@@ -5,9 +5,9 @@ Simple vector math library for any purposes
 
 ======
 
-This libraray is design for simple usage of vector math
-in allpication involvin 2D and 3D graphics, or other vectors
-of any desirable type.
+This libraray is designed for simple vector math usage
+in allpication involvin 2D graphics like applications 
+using openGL, GLES, DirectX.
 
 Can be used fully or partially.
 

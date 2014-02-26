@@ -15,6 +15,8 @@
 #define vinline inline
 #endif
 
+#include "CVec2.h"
+
 namespace vectry
 {
     template<typename T>
