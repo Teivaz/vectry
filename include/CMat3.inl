@@ -299,3 +299,11 @@ vinline CVec2<T> Transform(const CMat3<T>& transformation, const CVec2<T>& point
     T y = transformation.b1 * point.y + transformation.b2 * point.x + transformation.b3;
     return CVec2<T>(x, y);
 }
+
+template<typename T>
+vinline CVec2<T> TransformOuter(const CMat3<T>& transformation, const CVec2<T>& point)
+{
+    T x = transformation.a1 * point.x + transformation.a2 * point.y;
+    T y = transformation.b1 * point.y + transformation.b2 * point.x;
+    return CVec2<T>(x, y);
+}

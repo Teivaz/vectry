@@ -71,7 +71,10 @@ namespace vectry
     };
 
     template<typename T>
-    vinline CVec2<T> Transform(const CMat3<T>& transformation, const CVec2<T>& point);
+	vinline CVec2<T> Transform(const CMat3<T>& transformation, const CVec2<T>& point);
+
+	template<typename T>
+	vinline CVec2<T> TransformOuter(const CMat3<T>& transformation, const CVec2<T>& point);
 
 // Implementation
 #include "CMat3.inl"
