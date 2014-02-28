@@ -7,6 +7,15 @@
 * This document is licensed under the GPLv2
 */
 
+// vec<float> = vec<double>
+template<typename T>
+template<typename R>
+vexplicit vinline CVec3<T>::CVec3(const CVec3<R>& vec)
+: x(static_cast<T>(vec.x))
+, y(static_cast<T>(vec.y))
+, z(static_cast<T>(vec.z))
+{}
+
 // vec()
 template<typename T> 
 vinline CVec3<T>::CVec3()

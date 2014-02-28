@@ -7,6 +7,14 @@
 * This document is licensed under the GPLv2
 */
 
+// vec<float> = vec<double>
+template<typename T>
+template<typename R>
+vexplicit vinline CVec2<T>::CVec2(const CVec2<R>& vec)
+    : x(static_cast<T>(vec.x))
+    , y(static_cast<T>(vec.y))
+{}
+
 // vec()
 template<typename T>
 vinline CVec2<T>::CVec2()
@@ -186,7 +194,7 @@ vinline T CVec2<T>::Normalize()
 template<typename T>
 vinline void CVec2<T>::SwapElemtns()
 {
-    float t = x;
+    T t = x;
     x = y;
     y = t;
 }

@@ -7,6 +7,15 @@
 * This document is licensed under the GPLv2
 */
 
+template<typename T>
+template<typename R>
+vexplicit vinline CVec4<T>::CVec4(const CVec4<R>& vec)
+    : x(static_cast<T>(vec.x))
+    , y(static_cast<T>(vec.y))
+    , z(static_cast<T>(vec.z))
+    , w(static_cast<T>(vec.w))
+{}
+
 // vec()
 template<typename T> 
 vinline CVec4<T>::CVec4()
@@ -27,7 +36,7 @@ vinline CVec4<T>::CVec4(const CVec4& vec)
 
 // vec4(vec3, i)
 template<typename T>
-vinline CVec4<T>::CVec4(const CVec2<T>& vec, T value)
+vinline CVec4<T>::CVec4(const CVec3<T>& vec, T value)
     : x(vec.x)
     , y(vec.y)
     , z(vec.z)
@@ -36,7 +45,7 @@ vinline CVec4<T>::CVec4(const CVec2<T>& vec, T value)
 
 // vec4(i, vec3)
 template<typename T>
-vinline CVec4<T>::CVec4(T value, const CVec2<T>& vec)
+vinline CVec4<T>::CVec4(T value, const CVec3<T>& vec)
     : x(value)
     , y(vec.x)
     , z(vec.y)
@@ -55,10 +64,10 @@ vinline CVec4<T>::CVec4(T _x, T _y, T _z, T _w)
 // vec(i)
 template<typename T> 
 vinline CVec4<T>::CVec4(T value)
-: x(value)
-, y(value)
-, z(value)
-, w(value)
+    : x(value)
+    , y(value)
+    , z(value)
+    , w(value)
 {}
 
 // vec = vec

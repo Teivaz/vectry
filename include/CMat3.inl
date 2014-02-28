@@ -7,14 +7,22 @@
 * This document is licensed under the GPLv2
 */
 
+// mat<float> = mat<double>
+template<typename T>
+template<typename R>
+vexplicit vinline CMat3<T>::CMat3(const CMat3<R>& mat)
+    : a1(static_cast<T>(mat.a1)), a2(static_cast<T>(mat.a2)), a3(static_cast<T>(mat.a3))
+    , b1(static_cast<T>(mat.b1)), b2(static_cast<T>(mat.b2)), b3(static_cast<T>(mat.b3))
+    , c1(static_cast<T>(mat.c1)), c2(static_cast<T>(mat.c2)), c3(static_cast<T>(mat.c3))
+{}
+
 // mat()
 template<typename T> 
 vinline CMat3<T>::CMat3()
     : a1(static_cast<T>(0)), a2(static_cast<T>(0)), a3(static_cast<T>(0))
     , b1(static_cast<T>(0)), b2(static_cast<T>(0)), b3(static_cast<T>(0))
     , c1(static_cast<T>(0)), c2(static_cast<T>(0)), c3(static_cast<T>(0))
-{
-}
+{}
 
 // mat(i)
 template<typename T> 
@@ -22,8 +30,7 @@ vinline CMat3<T>::CMat3(T value)
     : a1(value), a2(value), a3(value)
     , b1(value), b2(value), b3(value)
     , c1(value), c2(value), c3(value)
-{
-}
+{}
 
 // mat(i, i, i, i, i, i, i, i, i);
 template<typename T>

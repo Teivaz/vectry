@@ -23,6 +23,8 @@ namespace vectry
     public:
         T x, y;
 
+        template<typename R>
+        vexplicit vinline CVec2(const CVec2<R>& vec);
         vexplicit vinline CVec2();
         vexplicit vinline CVec2(T _x, T _y);
         vexplicit vinline CVec2(T value);

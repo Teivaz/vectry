@@ -22,7 +22,7 @@
 
 #include "CVec2.h"
 #include "CVec3.h"
-//#include "CVec4.h"
+#include "CVec4.h"
 #include "CMat3.h"
 //#include "CMat4.h"
 
@@ -36,9 +36,9 @@ namespace vectry
     typedef CVec3<double>   vec3d;
     typedef CVec3<int>      vec3i;
 
-    //typedef CVec4<float>	vec4f;
-    //typedef CVec4<double>	vec4d;
-    //typedef CVec4<int>	vec4i;
+    typedef CVec4<float>	vec4f;
+    typedef CVec4<double>	vec4d;
+    typedef CVec4<int>	    vec4i;
     
     typedef CMat3<float>    mat3f;
     typedef CMat3<double>   mat3d;

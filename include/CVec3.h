@@ -26,6 +26,8 @@ namespace vectry
         T x, y, z;
 
         // Constructors
+        template<typename R>
+        vexplicit vinline CVec3(const CVec3<R>& vec);
         vexplicit vinline CVec3();
         vexplicit vinline CVec3(const CVec2<T>& vec, T v);
         vexplicit vinline CVec3(T v, const CVec2<T>& vec);

@@ -29,6 +29,8 @@ namespace vectry
         T c1, c2, c3;
 
         // Constructors
+        template<typename R>
+        vexplicit vinline CMat3(const CMat3<R>&);
         vexplicit vinline CMat3();
         vexplicit vinline CMat3(T value);
         vexplicit vinline CMat3(T values[9]);
